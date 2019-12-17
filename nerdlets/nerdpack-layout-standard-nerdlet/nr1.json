@@ -1,6 +1,6 @@
 {
   "schemaType": "NERDLET",
-  "id": "nerdpack-layout-standard-nerdlet",
-  "description": "Describe me",
-  "displayName": "Standard nerdpack layout"
+  "id": "nerdpack-layout-double-sidebar-nerdlet",
+  "description": "A boilerplate for the double sidebar nerdpack design layout",
+  "displayName": "Double sidebar nerdpack layout"
 }

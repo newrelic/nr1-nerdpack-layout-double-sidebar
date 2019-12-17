@@ -1,0 +1,150 @@
+.detail-pane-grid-item {
+  height: 100%;
+  overflow: hidden;
+  border-left: 1px solid #eee;
+}
+
+.container-panel {
+  overflow: hidden;;
+  height: 100%;
+  min-height: 400px;
+  background: white;
+
+  .header {
+    display: flex;
+    width: calc(100% - 16px);
+    padding: 16px;
+    position: relative;
+    box-sizing: border-box;
+    flex-direction: column;
+
+    .close-button {
+      position: absolute;
+      right: 30px;
+    }
+
+    h3 {
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 12px;
+      color: #000E0E;
+    }
+    .section {
+      margin-bottom: 4px;
+
+      .title {
+        font-size: 12px;
+        font-weight: 150;
+        vertical-align: sub;
+        text-align: right;
+      }
+    }
+  }
+
+[class*="wnd-Tabs-navigation"] {
+  box-shadow: 0 2px 0 rgba(0,0,0, .02);
+}
+
+[class$="wnd-Tabs"] {
+  height: 100%;
+}
+
+[class$="wnd-TabContent"] {
+  padding: 16px;
+
+  p {
+    margin-bottom: 8px;
+  }
+}
+
+[class*="Tabs-pane"] {
+  height: calc(100% - 117px);
+  overflow: scroll;
+}
+  .list-tab-item {
+    padding: 0;
+  }
+
+  ul.key-value-pairs {
+    list-style: none;
+
+    li {
+      display: flex;
+      flex-direction: column;
+      padding: 8px 16px;
+      border-bottom: 1px solid #f4f4f4;
+
+      .key {
+        color: #888888;
+        font-size: 10px;
+      }
+      .value {
+        overflow-wrap: break-word;
+        font-size: 12px;
+      }
+    }
+    .clickable {
+      color: #0079bf;
+    }
+    .clickable:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
+  
+.detail-pane-grid-minimized {
+  .detail-pane-grid-item {
+    width: 200px;
+    position: absolute;
+    right: 0;
+    overflow: visible;
+    transform: translateX(100%);
+
+    .container-panel {
+      overflow: visible;
+    }
+
+    [class*="wnd-Tabs"] {
+      display: none;
+    }
+
+    .minimize-button {
+      right: auto;
+      left: -24px;
+      background-color: #d5d7d7;
+
+      &:hover {
+        background-color: #e3e4e4;
+      }
+
+      .ic-Icon {
+        transform: rotate(180deg) translateX(1px);
+      }
+    }
+  }
+}
+  
+.minimize-button {
+  position: absolute;
+  right: -16px;
+  background-color: #F4F5F5;
+  width:  24px;
+  border-radius: 3px 0 0 3px;
+  height: 24px;
+
+  &:hover {
+    background-color: #edeeee;
+    cursor: pointer;
+  }
+}
+
+.minimize-button .ic-Icon {
+  position: relative;
+  top: 3px;
+  left: 9px;
+}
+  
+.detail-pane-hidden {
+  display: none;
+}

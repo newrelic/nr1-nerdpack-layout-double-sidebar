@@ -1,14 +1,14 @@
 {
   "private": true,
-  "name": "Standard layout",
-  "description": "Nerdpack nerdpack-layout-standard",
+  "name": "double-sidebar-layout",
+  "description": "A boilerplate for the double sidebar nerdpack design layout",
   "version": "0.1.0",
   "scripts": {
     "start": "nr1 nerdpack:serve",
     "test": "exit 0"
   },
   "nr1": {
-    "uuid": "cf7e0af6-2201-4d7c-855d-662da1eca07b"
+    "uuid": "79c6242e-93a3-4154-b6b1-32a429fabd44"
   },
   "dependencies": {
     "prop-types": "^15.6.2",

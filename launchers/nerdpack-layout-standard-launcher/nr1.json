@@ -1,7 +1,7 @@
 {
   "schemaType": "LAUNCHER",
-  "id": "nerdpack-layout-standard-launcher",
-  "description": "Describe me",
-  "displayName": "NerdpackLayoutStandard",
-  "rootNerdletId": "nerdpack-layout-standard-nerdlet"
+  "id": "nerdpack-layout-double-sidebar-launcher",
+  "description": "A boilerplate for the double sidebar nerdpack design layout",
+  "displayName": "Nerdpack Layout - Double Sidebar",
+  "rootNerdletId": "nerdpack-layout-double-sidebar-nerdlet"
 }

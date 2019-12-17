@@ -10,13 +10,39 @@ import {
   DropdownItem,
   TextField,
   Button,
-  TableChart
+  Tabs,
+  TabsItem,
+  Icon
 } from "nr1";
+
+import DetailPane from '../../components/DetailPane'
 
 // https://docs.newrelic.com/docs/new-relic-programmable-platform-introduction
 
-export default class NerdpackLayoutStandard extends React.Component {
+export default class NerdpackLayoutDoubleSidebar extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.toggleDetailPane = this.toggleDetailPane.bind(this)
+    this.onCloseHandler = this.onCloseHandler.bind(this)
+
+    this.state = {
+      detailPanelActive: true,
+      detailPaneExpanded: true
+    }
+  }
+
+  toggleDetailPane() {
+    this.setState({detailPaneExpanded: !this.state.detailPaneExpanded})
+  }
+  
+  onCloseHandler() {
+    this.setState({ detailPanelActive: false })
+  }
+
   render() {
+    const { detailPaneExpanded, detailPanelActive } = this.state
+
     return (
       <React.Fragment>
         <Stack
@@ -66,18 +92,19 @@ export default class NerdpackLayoutStandard extends React.Component {
           </StackItem>
         </Stack>
         <Grid
-          className="primary-grid"
+          className={`primary-grid ${detailPaneExpanded ? 'detail-pane-grid-expanded' : 'detail-pane-grid-minimized'}`}
           spacingType={[Grid.SPACING_TYPE.NONE, Grid.SPACING_TYPE.NONE]}
+          
         >
           <GridItem className="sidebar-container" columnSpan={3}>
             <ul className="sidebar-list">
               {/* Create an array that we'll use to display a bunch of list items */}
               {Array.from(Array(50).keys()).map(item => {
-                return <li className="sidebar-list-item">List item {item}</li>;
+                return <li className="sidebar-list-item" key={item}>List item {item}</li>;
               })}
             </ul>
           </GridItem>
-          <GridItem className="primary-content-container" columnSpan={9}>
+          <GridItem className="primary-content-container" columnSpan={detailPaneExpanded && detailPanelActive ? 6 : 9}>
             <main className="primary-content full-height">
               <Stack
                 className="empty-state"
@@ -94,15 +121,18 @@ export default class NerdpackLayoutStandard extends React.Component {
                 <StackItem>
                   <p className="empty-state-description">
                     Open up
-                    <code>nerdpack-layout-standard-nerdlet/index.js</code> and
+                    <code>nerdpack-layout-double-sidebar-nerdlet/index.js</code> and
                     replace dummy content with your content. Have suggestions,
                     concerns, or ideas for how this template could be better?
-                    Feel free to <a href="https://github.com/newrelic/nr1-nerdpack-layout-standard">submit an issue or PR :)</a>
+                    Feel free to <a href="https://github.com/newrelic/nr1-nerdpack-layout-double-sidebar">submit an issue or PR :)</a>
                     .
                   </p>
                 </StackItem>
               </Stack>
             </main>
+          </GridItem>
+          <GridItem className={`detail-pane-grid-item `} columnSpan={detailPaneExpanded && detailPanelActive ? 3 : 0}>
+            <DetailPane className={!detailPanelActive ? `detail-pane-hidden` : ''} toggleDetailPane={this.toggleDetailPane} onClose={this.onCloseHandler}></DetailPane>
           </GridItem>
         </Grid>
       </React.Fragment>
