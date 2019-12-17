@@ -46,8 +46,8 @@ export default class DetailPane extends React.Component {
               {Array.from(Array(50).keys()).map(item => {
                 return (
                   <li key={item}>
-                    <span className="key">key {item}: </span>
-                    <span className="value">value {item}</span>
+                    <span className="key">key example {item}: </span>
+                    <span className="value">value example {item}</span>
                   </li>
                 )
               })}
