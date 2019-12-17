@@ -1,13 +1,14 @@
-# Standard layout design nerdpack
+# Double sidebar layout design nerdpack
 
 This nerdpack serves as a boilerplate to developers building on the New Relic One platform. In order to use this layout for your next project, following the "Getting started" instructions below and then replace the dummy content in `nerdlet/index.js` with your content.
 
 #### What's included?
 - JSX to implement this layout
 - CSS to improve the styling and provide some basic UX help
+- a `<DetailPane />` component which is used for the right sidebar
 - Utility classes for things like making an element full width or full height.
 
-![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/newrelic/nr1-nerdpack-layout-standard?include_prereleases&sort=semver) [![Snyk](https://snyk.io/test/github/newrelic/nr1-nerdpack-layout-standard/badge.svg)](https://snyk.io/test/github/newrelic/nr1-nerdpack-layout-standard)
+![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/newrelic/nr1-nerdpack-layout-double-sidebar?include_prereleases&sort=semver) [![Snyk](https://snyk.io/test/github/newrelic/nr1-nerdpack-layout-double-sidebar/badge.svg)](https://snyk.io/test/github/newrelic/nr1-nerdpack-layout-double-sidebar)
 
 ## Usage
 
@@ -32,8 +33,8 @@ npm -v
 3. Next, to clone this repository and run the code locally against your New Relic data, execute the following command:
 
 ```bash
-nr1 nerdpack:clone -r https://github.com/newrelic/nr1-nerdpack-layout-standard.git
-cd nr1-nerdpack-layout-standard
+nr1 nerdpack:clone -r https://github.com/newrelic/nr1-nerdpack-layout-double-sidebar.git
+cd nr1-nerdpack-layout-double-sidebar
 nr1 nerdpack:serve
 ```
 
@@ -64,7 +65,7 @@ We encourage you to bring your experiences and questions to the [Explorers Hub](
 
 New Relic hosts and moderates an online forum where customers can interact with New Relic employees as well as other customers to get help and share best practices. Like all official New Relic open source projects, there's a related Community topic in the New Relic Explorers Hub. You can find this project's topic/threads here:
 
-https://discuss.newrelic.com/t/standard-layouts/88605
+https://discuss.newrelic.com/t/double-sidebar-layouts/88605
 
 ### Issues / Enhancement Requests
 
@@ -74,4 +75,4 @@ Issues and enhancement requests can be submitted in the [Issues tab of this repo
 
 Contributions are welcome (and if you submit a Enhancement Request, expect to be invited to contribute it yourself :grin:). Please review our [Contributors Guide](CONTRIBUTING.md).
 
-Keep in mind that when you submit your pull request, you'll need to sign the CLA via the click-through using CLA-Assistant. If you'd like to execute our corporate CLA, or if you have any questions, please drop us an email at opensource+nerdpack-layout-standard@newrelic.com
+Keep in mind that when you submit your pull request, you'll need to sign the CLA via the click-through using CLA-Assistant. If you'd like to execute our corporate CLA, or if you have any questions, please drop us an email at opensource+nerdpack-layout-double-sidebar@newrelic.com
