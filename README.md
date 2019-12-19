@@ -1,8 +1,9 @@
-# Double sidebar layout design nerdpack
+# nr1-nerdpack-layout-double-sidebar
 
 This nerdpack serves as a boilerplate to developers building on the New Relic One platform. In order to use this layout for your next project, following the "Getting started" instructions below and then replace the dummy content in `nerdlet/index.js` with your content.
 
 #### What's included?
+
 - JSX to implement this layout
 - CSS to improve the styling and provide some basic UX help
 - a `<DetailPane />` component which is used for the right sidebar
@@ -21,15 +22,20 @@ Since this nerdpack is just a boilerplate for applications built on New Relic On
 This project is distributed under the [Apache 2 license](LICENSE).
 
 ### What do you need to make this work?
+
 Nothing! Just follow the getting started instructions below :).
 
 ### Getting started
+
 1. First, ensure that you have [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [NPM](https://www.npmjs.com/get-npm) installed. If you're unsure whether you have one or both of them installed, run the following command(s) (If you have them installed these commands will return a version number, if not, the commands won't be recognized):
+
 ```bash
 git --version
 npm -v
 ```
+
 2. Next, install the [NR1 CLI](https://one.newrelic.com/launcher/developer-center.launcher) by going to [this link](https://one.newrelic.com/launcher/developer-center.launcher) and following the instructions (5 minutes or less) to install and setup your New Relic development environment.
+
 3. Next, to clone this repository and run the code locally against your New Relic data, execute the following command:
 
 ```bash
