@@ -1,6 +1,4 @@
-/* eslint-disable no-trailing-spaces */
-
-import React from "react";
+import React from 'react';
 import {
   Grid,
   GridItem,
@@ -9,42 +7,41 @@ import {
   Dropdown,
   DropdownItem,
   TextField,
-  Button,
-  Tabs,
-  TabsItem,
-  Icon
-} from "nr1";
+  Button
+} from 'nr1';
 
-import DetailPane from '../../components/DetailPane'
+import DetailPane from '../../components/DetailPane';
 
 // https://docs.newrelic.com/docs/new-relic-programmable-platform-introduction
 
 export default class NerdpackLayoutDoubleSidebar extends React.Component {
   constructor(props) {
-    super(props)
+    super(props);
 
-    this.toggleDetailPane = this.toggleDetailPane.bind(this)
-    this.onCloseHandler = this.onCloseHandler.bind(this)
+    this.toggleDetailPane = this.toggleDetailPane.bind(this);
+    this.onCloseHandler = this.onCloseHandler.bind(this);
 
     this.state = {
       detailPanelActive: true,
       detailPaneExpanded: true
-    }
+    };
   }
 
   toggleDetailPane() {
-    this.setState({detailPaneExpanded: !this.state.detailPaneExpanded})
+    this.setState(prevState => ({
+      detailPaneExpanded: !prevState.detailPaneExpanded
+    }));
   }
-  
+
   onCloseHandler() {
-    this.setState({ detailPanelActive: false })
+    this.setState({ detailPanelActive: false });
   }
 
   render() {
-    const { detailPaneExpanded, detailPanelActive } = this.state
+    const { detailPaneExpanded, detailPanelActive } = this.state;
 
     return (
-      <React.Fragment>
+      <>
         <Stack
           className="toolbar-container"
           fullWidth
@@ -66,10 +63,7 @@ export default class NerdpackLayoutDoubleSidebar extends React.Component {
                 </Dropdown>
               </StackItem>
               <StackItem className="toolbar-item">
-                <TextField
-                  label="Search"
-                  placeholder="e.g. example query"
-                ></TextField>
+                <TextField label="Search" placeholder="e.g. example query" />
               </StackItem>
             </Stack>
           </StackItem>
@@ -81,20 +75,18 @@ export default class NerdpackLayoutDoubleSidebar extends React.Component {
               horizontalType={Stack.HORIZONTAL_TYPE.RIGHT}
             >
               <StackItem>
-                <Button
-                  onClick={() => alert("You clicked me!")}
-                  type={Button.TYPE.PRIMARY}
-                >
-                  Primary button
-                </Button>
+                <Button type={Button.TYPE.PRIMARY}>Primary button</Button>
               </StackItem>
             </Stack>
           </StackItem>
         </Stack>
         <Grid
-          className={`primary-grid ${detailPaneExpanded ? 'detail-pane-grid-expanded' : 'detail-pane-grid-minimized'}`}
+          className={`primary-grid ${
+            detailPaneExpanded
+              ? 'detail-pane-grid-expanded'
+              : 'detail-pane-grid-minimized'
+          }`}
           spacingType={[Grid.SPACING_TYPE.NONE, Grid.SPACING_TYPE.NONE]}
-          
         >
           {/*
             Note: This sidebar does _not_ have to be a list of links/navigation.
@@ -105,11 +97,18 @@ export default class NerdpackLayoutDoubleSidebar extends React.Component {
             <ul className="sidebar-list">
               {/* Create an array that we'll use to display a bunch of list items */}
               {Array.from(Array(50).keys()).map(item => {
-                return <li className="sidebar-list-item" key={item}>List item {item}</li>;
+                return (
+                  <li className="sidebar-list-item" key={item}>
+                    List item {item}
+                  </li>
+                );
               })}
             </ul>
           </GridItem>
-          <GridItem className="primary-content-container" columnSpan={detailPaneExpanded && detailPanelActive ? 6 : 9}>
+          <GridItem
+            className="primary-content-container"
+            columnSpan={detailPaneExpanded && detailPanelActive ? 6 : 9}
+          >
             <main className="primary-content full-height">
               <Stack
                 className="empty-state"
@@ -126,21 +125,33 @@ export default class NerdpackLayoutDoubleSidebar extends React.Component {
                 <StackItem>
                   <p className="empty-state-description">
                     Open up
-                    <code>nerdpack-layout-double-sidebar-nerdlet/index.js</code> and
-                    replace dummy content with your content. Have suggestions,
-                    concerns, or ideas for how this template could be better?
-                    Feel free to <a href="https://github.com/newrelic/nr1-nerdpack-layout-double-sidebar">submit an issue or PR :)</a>
+                    <code>
+                      nerdpack-layout-double-sidebar-nerdlet/index.js
+                    </code>{' '}
+                    and replace dummy content with your content. Have
+                    suggestions, concerns, or ideas for how this template could
+                    be better? Feel free to{' '}
+                    <a href="https://github.com/newrelic/nr1-nerdpack-layout-double-sidebar">
+                      submit an issue or PR :)
+                    </a>
                     .
                   </p>
                 </StackItem>
               </Stack>
             </main>
           </GridItem>
-          <GridItem className={`detail-pane-grid-item `} columnSpan={detailPaneExpanded && detailPanelActive ? 3 : 0}>
-            <DetailPane className={!detailPanelActive ? `detail-pane-hidden` : ''} toggleDetailPane={this.toggleDetailPane} onClose={this.onCloseHandler}></DetailPane>
+          <GridItem
+            className="detail-pane-grid-item "
+            columnSpan={detailPaneExpanded && detailPanelActive ? 3 : 0}
+          >
+            <DetailPane
+              className={!detailPanelActive ? `detail-pane-hidden` : 'visible'}
+              toggleDetailPane={this.toggleDetailPane}
+              onClose={this.onCloseHandler}
+            />
           </GridItem>
         </Grid>
-      </React.Fragment>
+      </>
     );
   }
 }
