@@ -109,12 +109,10 @@
 }
 
 .empty-state {
-  height: 100%;
   box-sizing: border-box;
   border: 3px dashed #e3e4e4;
   border-radius: 10px;
   padding: 24px;
-  margin: 16px;
   text-align: center;
   // because setting the height: 100% only works if the parent 
   // of this element has an explicitly defined height. Since it
