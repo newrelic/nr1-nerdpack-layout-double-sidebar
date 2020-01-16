@@ -1,23 +1,33 @@
 # nr1-nerdpack-layout-double-sidebar
 
-This nerdpack serves as a boilerplate to developers building on the New Relic One platform. In order to use this layout for your next project, following the "Getting started" instructions below and then replace the dummy content in `nerdlet/index.js` with your content.
+This nerdpack serves as a boilerplate for developers building on the New Relic One platform. In order to use this layout for your next project, follow the **Getting started** instructions below, and then replace the dummy content in `nerdlet/index.js` with your content.
 
 #### What's included?
 
-- JSX to implement this layout
-- CSS to improve the styling and provide some basic UX help
-- a `<DetailPane />` component which is used for the right sidebar
+- [JSX](https://reactjs.org/docs/introducing-jsx.html) to implement this layout.
+- CSS to improve the styling and provide some basic UX help.
+- A `<DetailPane />` component to use for the right sidebar.
 - Utility classes for things like making an element full width or full height.
 
 ![GitHub release (latest SemVer including pre-releases)](https://img.shields.io/github/v/release/newrelic/nr1-nerdpack-layout-double-sidebar?include_prereleases&sort=semver) [![Snyk](https://snyk.io/test/github/newrelic/nr1-nerdpack-layout-double-sidebar/badge.svg)](https://snyk.io/test/github/newrelic/nr1-nerdpack-layout-double-sidebar)
 
 ## Usage
 
-Since this nerdpack is just a boilerplate for applications built on New Relic One, the best way to use it is to just clone the repo whenever you're ready to start a new project. The idea is that, since the code that determines the layout has already been written you can just replace the content inside of each section (toolbar, sidebar, primary-content) with the content that you have in mind for your project.
+This Nerdpack is a boilerplate for applications built on New Relic One; the best way to use it is to clone the repo whenever you're ready to start a new project. The idea is that the code that determines the layout has already been written, so you can replace the content inside of each section (toolbar, sidebar, primary-content) with the content that you have in mind for your project.
 
 ![screenshot of this project](assets/screenshot.png)
 
-### Open Source License
+**More boilerplate layout options** 
+
+[Standard layout](https://github.com/newrelic/nr1-nerdpack-layout-standard)
+[T-bone layout](https://github.com/newrelic/nr1-nerdpack-layout-t-bone)
+[3 column layout](https://github.com/newrelic/nr1-nerdpack-layout-3-column)
+[4 column layout](https://github.com/newrelic/nr1-nerdpack-layout-4-column)
+[2x2 grid layout](https://github.com/newrelic/nr1-nerdpack-layout-2x2-grid)
+[3x2 grid layout](https://github.com/newrelic/nr1-nerdpack-layout-3x2-grid)
+[4x2 grid layout](https://github.com/newrelic/nr1-nerdpack-layout-4x2-grid)
+
+### Open source license
 
 This project is distributed under the [Apache 2 license](LICENSE).
 
@@ -27,16 +37,16 @@ Nothing! Just follow the getting started instructions below :).
 
 ### Getting started
 
-1. First, ensure that you have [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [NPM](https://www.npmjs.com/get-npm) installed. If you're unsure whether you have one or both of them installed, run the following command(s) (If you have them installed these commands will return a version number, if not, the commands won't be recognized):
+1. Ensure that you have [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [NPM](https://www.npmjs.com/get-npm) installed. If you're unsure whether you have one or both of them installed, run the following commands. (If you have them installed these commands will return a version number; if not, the commands won't be recognized):
 
 ```bash
 git --version
 npm -v
 ```
 
-2. Next, install the [NR1 CLI](https://one.newrelic.com/launcher/developer-center.launcher) by going to [this link](https://one.newrelic.com/launcher/developer-center.launcher) and following the instructions (5 minutes or less) to install and setup your New Relic development environment.
+2. Install the [NR1 CLI](https://one.newrelic.com/launcher/developer-center.launcher) by going to [this link](https://one.newrelic.com/launcher/developer-center.launcher) and following the instructions (5 minutes or less) to install and set up your New Relic development environment.
 
-3. Next, to clone this repository and run the code locally against your New Relic data, execute the following command:
+3. Use the following command to clone this repository and run the code locally against your New Relic data:
 
 ```bash
 nr1 nerdpack:clone -r https://github.com/newrelic/nr1-nerdpack-layout-double-sidebar.git
